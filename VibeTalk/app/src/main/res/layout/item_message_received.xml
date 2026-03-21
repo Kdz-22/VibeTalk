@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_message_received.xml  (mensagem recebida — esquerda, branco) -->
+<!--
+    FLEXBOX aqui: justifyContent="flex_start" empurra o balão
+    para a ESQUERDA — só mudando uma propriedade do FlexboxLayout!
+-->
+<com.google.android.flexbox.FlexboxLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="2dp"
+    app:flexDirection="row"
+    app:justifyContent="flex_start">
+
+    <!-- Avatar do outro usuário -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/bg_kevin"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="6dp"
+        android:layout_marginTop="2dp"
+        app:shapeAppearanceOverlay="@style/CircleImageView"
+        android:contentDescription="Avatar" />
+
+    <!-- Balão da mensagem recebida -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_bubble_received"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"
+        app:layout_flexBasisPercent="70%">
+
+        <!-- Nome do remetente -->
+        <TextView
+            android:id="@+id/tvSender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kevin"
+            android:textColor="#3F51B5"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- Texto da mensagem -->
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oi!"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:lineSpacingExtra="2dp" />
+
+        <!-- Horário -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="10:31"
+            android:textColor="#667781"
+            android:textSize="11sp"
+            android:paddingTop="2dp" />
+    </LinearLayout>
+
+</com.google.android.flexbox.FlexboxLayout>
