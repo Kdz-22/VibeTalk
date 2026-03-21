@@ -4,7 +4,7 @@ public class Message{
 
 	private String text;
 	private String time;
-	private boolean isSent = true // true - enviada por mim; false - recebida
+	private boolean isSent = true; // true - enviada por mim; false - recebida
 
 	public Message(String text, String time, boolean isSent){
 		this.text = text;
