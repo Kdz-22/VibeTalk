@@ -14,6 +14,6 @@ public class Message{
 
 	public String getText(){ return text; }
 	public String getTime(){ return time; }
-	public String getSent(){ return isSent; }
+	public boolean getSent(){ return isSent; }
 
 }
